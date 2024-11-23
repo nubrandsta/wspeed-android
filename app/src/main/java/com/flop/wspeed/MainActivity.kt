@@ -19,12 +19,22 @@ class MainActivity : AppCompatActivity() {
     private lateinit var previewView: PreviewView
     private lateinit var chart: LineChart
 
+    private lateinit var rpmTextView: TextView
+    private lateinit var stableRpmTextView: TextView
+
+
+    private val rpmHistory = mutableListOf<Float>() // For tracking recent RPMs
+    private var lastStableRpm: Float = 0f // Last stable RPM value
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         previewView = findViewById(R.id.view_finder)
         chart = findViewById(R.id.chart)
+
+        rpmTextView = findViewById(R.id.rpmTextView)
+        stableRpmTextView = findViewById(R.id.stableRpmTextView)
 
         setupChart()
         setupCamera()
@@ -78,7 +88,37 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun displayRPM(rpm: Float) {
-        findViewById<TextView>(R.id.rpmTextView).text = String.format("RPM: %.2f", rpm)
+        // Update the current RPM display
+        rpmTextView.text = String.format("RPM: %.2f", rpm)
+
+        // Update RPM history for stability check
+        updateRpmHistory(rpm)
+
+        // Check stability and update stable RPM display
+        if (isStableRpm()) {
+            lastStableRpm = rpmHistory.average().toFloat()
+            stableRpmTextView.setTextColor(ContextCompat.getColor(this, android.R.color.holo_green_light))
+        } else {
+            stableRpmTextView.setTextColor(ContextCompat.getColor(this, android.R.color.darker_gray))
+        }
+
+        stableRpmTextView.text = String.format("Stable RPM: %.2f", lastStableRpm)
+    }
+
+    private fun isStableRpm(): Boolean {
+        if (rpmHistory.size < 5) return false // Not enough data
+        val mean = rpmHistory.average()
+        val variance = rpmHistory.map { (it - mean) * (it - mean) }.average()
+        val standardDeviation = kotlin.math.sqrt(variance)
+        return standardDeviation < 5 // Threshold for stability
+    }
+
+    private fun updateRpmHistory(rpm: Float) {
+        // Maintain a fixed-size buffer of recent RPM values
+        if (rpmHistory.size >= 20) {
+            rpmHistory.removeAt(0)
+        }
+        rpmHistory.add(rpm)
     }
 
 
@@ -89,6 +129,7 @@ class MainActivity : AppCompatActivity() {
         dataSet.setDrawCircles(false)
 
         chart.data = LineData(dataSet)
+        chart.description.text = "Pixel Intensity / Time"
         chart.description.isEnabled = false
         chart.axisLeft.isEnabled = true
         chart.axisRight.isEnabled = false
