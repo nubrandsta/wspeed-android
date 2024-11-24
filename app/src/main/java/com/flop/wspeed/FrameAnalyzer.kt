@@ -14,7 +14,7 @@ class FrameAnalyzer(
     private val onIntensityCalculated: (Float) -> Unit
 ) : ImageAnalysis.Analyzer {
 
-    private val rpmAnalyzer = RPMAnalyzer() // Add RPMAnalyzer instance
+    private val rpmAnalyzer = EnhancedRPMAnalyzer()
 
     override fun analyze(image: ImageProxy) {
         try {
@@ -31,17 +31,15 @@ class FrameAnalyzer(
             val roiMat = grayMat.submat(roi)
 
             // Calculate the mean intensity of the ROI
-            val mean = Scalar(0.0)
-            Core.mean(roiMat).`val`.let { mean.`val`[0] = it[0] }
+            val mean = Core.mean(roiMat)
+            val intensity = mean.`val`[0].toFloat()
 
-            // Pass intensity to the graph
-            onIntensityCalculated(mean.`val`[0].toFloat())
-
-            // Get the current timestamp
-            val currentTime = System.currentTimeMillis()
+            // Pass raw intensity to the graph
+            onIntensityCalculated(intensity)
 
             // Pass intensity to RPMAnalyzer
-            val rpm = rpmAnalyzer.processIntensity(mean.`val`[0].toFloat(), currentTime)
+            val currentTime = System.currentTimeMillis()
+            val rpm = rpmAnalyzer.processIntensity(intensity, currentTime)
 
             // Send RPM to the UI if calculated
             if (rpm != null) {
