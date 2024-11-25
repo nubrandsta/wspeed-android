@@ -35,8 +35,8 @@
         android:id="@+id/rpmTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RPM: 0"
-        android:textSize="24sp"
+        android:text="~Freq: 0 Hz"
+        android:textSize="16sp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +50,7 @@
         android:id="@+id/stableRpmTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stable RPM: 0"
+        android:text="Freq: 0 Hz"
         android:textSize="24sp"
         android:textColor="#A9A9A9"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,6 +69,36 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/chartTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intensitas Pixel / Detik"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/chart"
+        app:layout_constraintTop_toBottomOf="@+id/view_finder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresh"
+        android:drawableStart="@drawable/ic_refresh"
+        android:drawableTint="@color/white"
+        android:drawablePadding="4dp"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/cardview_dark_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chart"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

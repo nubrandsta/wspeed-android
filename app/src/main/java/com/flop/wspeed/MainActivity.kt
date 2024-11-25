@@ -1,6 +1,7 @@
 package com.flop.wspeed
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.Camera
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var rpmTextView: TextView
     private lateinit var stableRpmTextView: TextView
+
+    private lateinit var refreshButton: Button
 
 
     private val rpmHistory = mutableListOf<Float>() // For tracking recent RPMs
@@ -45,6 +48,15 @@ class MainActivity : AppCompatActivity() {
         } else {
             println("OpenCV successfully initialized!")
         }
+
+        refreshButton = findViewById(R.id.refreshButton)
+        refreshButton.setOnClickListener {
+            refreshActivity()
+        }
+    }
+
+    private fun refreshActivity() {
+        recreate()
     }
 
     private fun setupCamera() {
@@ -89,7 +101,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun displayRPM(rpm: Float) {
         // Update the current RPM display
-        rpmTextView.text = String.format("RPM: %.2f", rpm)
+        rpmTextView.text = String.format("~Freq: %.2f Hz", rpm)
 
         // Update RPM history for stability check
         updateRpmHistory(rpm)
@@ -102,7 +114,7 @@ class MainActivity : AppCompatActivity() {
             stableRpmTextView.setTextColor(ContextCompat.getColor(this, android.R.color.darker_gray))
         }
 
-        stableRpmTextView.text = String.format("Stable RPM: %.2f", lastStableRpm)
+        stableRpmTextView.text = String.format("Freq: %.2f Hz", lastStableRpm)
     }
 
     private fun isStableRpm(): Boolean {
