@@ -3,12 +3,14 @@ package com.flop.wspeed
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.camera.core.Camera
 import androidx.camera.core.CameraSelector
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
@@ -16,28 +18,37 @@ import com.github.mikephil.charting.data.LineDataSet
 import org.opencv.android.OpenCVLoader
 import java.util.concurrent.Executors
 
-class MainActivity : AppCompatActivity() {
+class RPMActivity : AppCompatActivity() {
     private lateinit var previewView: PreviewView
     private lateinit var chart: LineChart
 
     private lateinit var rpmTextView: TextView
     private lateinit var stableRpmTextView: TextView
+    private lateinit var bladesTextView: TextView
 
     private lateinit var refreshButton: Button
 
+    private var numberOfBlades: Int = 0
 
     private val rpmHistory = mutableListOf<Float>() // For tracking recent RPMs
-    private var lastStableRpm: Float = 0f // Last stable RPM value
+    private var lastStableRpm: Int = 0 // Last stable RPM value
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_rpm)
 
         previewView = findViewById(R.id.view_finder)
         chart = findViewById(R.id.chart)
 
         rpmTextView = findViewById(R.id.rpmTextView)
         stableRpmTextView = findViewById(R.id.stableRpmTextView)
+
+        val blades = intent.getIntExtra("number", -1)
+        numberOfBlades = blades
+        val bladesText = blades.toString() + " Jari-jari"
+
+        bladesTextView = findViewById(R.id.bladesTextView)
+        bladesTextView.text = bladesText
 
         setupChart()
         setupCamera()
@@ -100,22 +111,22 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun displayRPM(rpm: Float) {
-        // Update the current RPM display
+        val trueRpm = rpm / numberOfBlades // Adjust RPM by dividing by the number of blades
         rpmTextView.text = String.format("~Frekuensi: %.2f Hz", rpm)
 
         // Update RPM history for stability check
-        updateRpmHistory(rpm)
+        updateRpmHistory(trueRpm)
 
-        // Check stability and update stable RPM display
         if (isStableRpm()) {
-            lastStableRpm = rpmHistory.average().toFloat()
+            lastStableRpm = (rpmHistory.average().toInt() / 10) * 10
             stableRpmTextView.setTextColor(ContextCompat.getColor(this, android.R.color.holo_green_light))
         } else {
             stableRpmTextView.setTextColor(ContextCompat.getColor(this, android.R.color.darker_gray))
         }
 
-        stableRpmTextView.text = String.format("Frekuensi: %.2f Hz", lastStableRpm)
+        stableRpmTextView.text = String.format("%d RPM", lastStableRpm)
     }
+
 
     private fun isStableRpm(): Boolean {
         if (rpmHistory.size < 5) return false // Not enough data

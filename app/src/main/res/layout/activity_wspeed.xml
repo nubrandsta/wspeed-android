@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_blue"
-    tools:context=".MainActivity">
+    tools:context=".WSpeedActivity">
 
     <androidx.camera.view.PreviewView
         android:id="@+id/view_finder"
@@ -51,10 +51,27 @@
         app:layout_constraintVertical_bias="0.0"/>
 
     <TextView
+        android:id="@+id/bladesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 Jari Jari"
+        android:fontFamily="@font/ubuntubold"
+        android:textSize="18sp"
+        android:textColor="#A9A9A9"
+        android:drawablePadding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rpmTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintVertical_bias="0.0"
+        app:drawableTint="@color/white" />
+
+    <TextView
         android:id="@+id/stableRpmTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Frekuensi: 0 Hz"
+        android:text="0 RPM"
         android:fontFamily="@font/ubuntubold"
         android:textSize="24sp"
         android:textColor="#A9A9A9"
@@ -65,7 +82,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintVertical_bias="0.0"
-        app:drawableStartCompat="@drawable/ic_freq"
+        app:drawableStartCompat="@drawable/ic_spin"
         app:drawableTint="@color/white" />
 
     <!-- Graph View -->
@@ -111,10 +128,33 @@
         android:drawableTint="@color/white"
         android:text="Refresh"
         android:textColor="@android:color/white"
+
         app:layout_constraintBottom_toTopOf="@id/chart"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rpmTextView"
         app:layout_constraintVertical_bias="0.95" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/bright_yellow"
+        android:drawableStart="@drawable/ic_calc"
+        android:drawablePadding="4dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:drawableTint="@color/primary_blue"
+        android:text="Hitung!"
+        android:fontFamily="@font/ubuntubold"
+        android:background="@drawable/button_primary"
+        android:textColor="@color/primary_blue"
+        app:layout_constraintBottom_toTopOf="@id/chart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rpmTextView"
+        app:layout_constraintVertical_bias="0.95" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
