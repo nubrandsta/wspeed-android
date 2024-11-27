@@ -1,0 +1,2 @@
+ninja: Entering directory `D:\wspeed-android\opencv\.cxx\Debug\u5h47123\x86'
+ninja: no work to do.

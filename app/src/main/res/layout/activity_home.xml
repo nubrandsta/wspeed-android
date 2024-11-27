@@ -29,6 +29,7 @@
         android:textSize="30sp"
         android:textAlignment="center"
         android:textColor="@color/black"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0.0"
@@ -91,5 +92,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_tach"/>
+
+    <TextView
+        android:id="@+id/demo_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="gone"
+        android:text="Demo Version by Sukma Adhi Wijaya 2024"
+        android:textAlignment="center"
+        android:fontFamily="@font/notosans"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

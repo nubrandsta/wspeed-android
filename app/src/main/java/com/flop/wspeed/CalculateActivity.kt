@@ -26,7 +26,9 @@ class CalculateActivity : AppCompatActivity() {
         val angularSpeed = (2 * Math.PI * rpm) / 60
 
         val angular_speed_text = String.format("ω = %.3f rad/s", angularSpeed)
+        val result_text = String.format("%.3f rad/s", angularSpeed)
 
         binding.textFormula3A.text = angular_speed_text
+        binding.textWspeed.text = result_text
     }
 }
