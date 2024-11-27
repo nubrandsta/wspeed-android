@@ -1,6 +1,8 @@
 package com.flop.wspeed
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -33,6 +35,8 @@ class WSpeedActivity : AppCompatActivity() {
     private val rpmHistory = mutableListOf<Float>() // For tracking recent RPMs
     private var lastStableRpm: Int = 0 // Last stable RPM value
 
+    private var trueRPM = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wspeed)
@@ -49,6 +53,14 @@ class WSpeedActivity : AppCompatActivity() {
 
         bladesTextView = findViewById(R.id.bladesTextView)
         bladesTextView.text = bladesText
+
+        val buttonCalculate: Button = findViewById(R.id.calculateButton)
+        buttonCalculate.setOnClickListener{
+            val intent = Intent(this, CalculateActivity::class.java).apply{
+                putExtra("rpm",trueRPM)
+            }
+            startActivity(intent)
+        }
 
 
         setupChart()
@@ -113,6 +125,7 @@ class WSpeedActivity : AppCompatActivity() {
 
     private fun displayRPM(rpm: Float) {
         val trueRpm = rpm / numberOfBlades // Adjust RPM by dividing by the number of blades
+
         rpmTextView.text = String.format("~Frekuensi: %.2f Hz", rpm)
 
         // Update RPM history for stability check
@@ -120,6 +133,7 @@ class WSpeedActivity : AppCompatActivity() {
 
         if (isStableRpm()) {
             lastStableRpm = (rpmHistory.average().toInt() / 10) * 10
+            trueRPM = lastStableRpm
             stableRpmTextView.setTextColor(ContextCompat.getColor(this, android.R.color.holo_green_light))
         } else {
             stableRpmTextView.setTextColor(ContextCompat.getColor(this, android.R.color.darker_gray))

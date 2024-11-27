@@ -7,4 +7,261 @@
     android:layout_height="match_parent"
     tools:context=".CalculateActivity">
 
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Perhitungan Kecepatan Sudut"
+        android:textAlignment="center"
+        android:fontFamily="@font/notosans"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/bg_rpm"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:background="@drawable/button_primary"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        />
+
+    <TextView
+        android:id="@+id/title_rpm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Deteksi RPM"
+        android:textAlignment="center"
+        android:fontFamily="@font/ubunturegular"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/bg_rpm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_rpm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="0 RPM"
+        android:textAlignment="center"
+        android:fontFamily="@font/ubuntubold"
+        android:textSize="24dp"
+        android:textColor="@color/primary_yellow"
+        app:layout_constraintTop_toBottomOf="@id/title_rpm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/title_formula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Rumus Kecepatan Sudut dari RPM"
+        android:fontFamily="@font/notosans"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/bg_rpm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_formula_1_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="ω ="
+        android:fontFamily="@font/notosans"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/title_formula"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/text_formula_1_b"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="2 π x RPM"
+        android:fontFamily="@font/notosans"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/title_formula"
+        app:layout_constraintStart_toEndOf="@id/text_formula_1_a"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <View
+        android:id="@+id/text_formula_1_c"
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/title_formula"
+        app:layout_constraintStart_toEndOf="@id/text_formula_1_a"
+        app:layout_constraintEnd_toEndOf="@id/text_formula_1_b"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/text_formula_1_d"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="60"
+        android:fontFamily="@font/notosans"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/text_formula_1_c"
+        app:layout_constraintStart_toEndOf="@id/text_formula_1_a"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/title_formula_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Perhitungan"
+        android:fontFamily="@font/notosans"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/text_formula_1_d"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_formula_2_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="ω ="
+        android:fontFamily="@font/notosans"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/title_formula_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/text_formula_2_b"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="2 π x RPM"
+        android:fontFamily="@font/notosans"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/title_formula_2"
+        app:layout_constraintStart_toEndOf="@id/text_formula_2_a"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <View
+        android:id="@+id/text_formula_2_c"
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/title_formula_2"
+        app:layout_constraintStart_toEndOf="@id/text_formula_2_a"
+        app:layout_constraintEnd_toEndOf="@id/text_formula_2_b"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/text_formula_2_d"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="60"
+        android:fontFamily="@font/notosans"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/text_formula_2_c"
+        app:layout_constraintStart_toEndOf="@id/text_formula_2_a"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/title_formula_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Hasil"
+        android:fontFamily="@font/notosans"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/text_formula_2_d"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_formula_3_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="ω = X rad/s"
+        android:fontFamily="@font/notosans"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/title_formula_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
