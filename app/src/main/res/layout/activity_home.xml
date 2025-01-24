@@ -93,6 +93,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_tach"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="74dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:drawableStart="@drawable/ic_idea"
+        android:drawableTint="@color/primary_yellow"
+        android:text="Quiz Test!"
+        android:fontFamily="@font/ubuntubold"
+        android:textColor="@color/white"
+        android:background="@drawable/button_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_freq"/>
+
     <TextView
         android:id="@+id/demo_text"
         android:layout_width="match_parent"
@@ -103,8 +122,26 @@
         android:visibility="visible"
         android:text="Nurafni Hamdika Putri"
         android:textAlignment="center"
-        android:fontFamily="@font/meowscript"
-        android:textSize="32sp"
+        android:fontFamily="@font/ubunturegular"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/demo_text2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/demo_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="visible"
+        android:text="Jurusan Fisika UNM"
+        android:textAlignment="center"
+        android:fontFamily="@font/ubuntubold"
+        android:textSize="28sp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -60,6 +60,12 @@ class HomeActivity : AppCompatActivity() {
 
         }
 
+        binding.btnTest.setOnClickListener{
+            val intent = Intent(this, QuizTestActivity::class.java)
+            startActivity(intent)
+
+        }
+
     }
     private fun showDialogRPM() {
         // Inflate the dialog layout

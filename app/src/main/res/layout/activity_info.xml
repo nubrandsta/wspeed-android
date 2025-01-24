@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="visible"
+        android:text="Info"
+        android:textAlignment="center"
+        android:fontFamily="@font/ubuntubold"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/rpm_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="visible"
+        android:text="RPM"
+        android:fontFamily="@font/ubuntubold"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:textColor="@color/primary_blue"
+        app:drawableStartCompat="@drawable/ic_spin"
+        app:layout_constraintTop_toBottomOf="@id/title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/rpm_body_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="visible"
+        android:text="RPM (Rotations per Minute) adalah satuan yang pengukuran untuk menghitung jumlah putaran atau rotasi sebuah benda dalam satu menit. Istilah ini umum digunakan dalam berbagai bidang"
+        android:fontFamily="@font/ubunturegular"
+
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/rpm_title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/wspeed_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="visible"
+        android:text="Kecepatan Sudut"
+        android:fontFamily="@font/ubuntubold"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:textColor="@color/primary_blue"
+        app:drawableStartCompat="@drawable/ic_speed"
+        app:layout_constraintTop_toBottomOf="@id/rpm_body_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/wspeed_body_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="visible"
+        android:text="Kecepatan Sudut (Angular Velocity dalam Bahasa Inggris) adalah besaran yang menyatakan perubahan sudut yang terjadi dalam suatu benda dalam satu satuan waktu. Kecepatan sudut diukur dalam satuan radian per detik (rad/s)"
+        android:fontFamily="@font/ubunturegular"
+
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/wspeed_title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tachometer_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="visible"
+        android:text="Tachometer"
+        android:fontFamily="@font/ubuntubold"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:textColor="@color/primary_blue"
+        app:drawableStartCompat="@drawable/ic_calc"
+        app:layout_constraintTop_toBottomOf="@id/wspeed_body_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tachometer_body_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="visible"
+        android:text="Tachometer adalah alat yang digunakan untuk mengukur kecepatan putaran atau rotasi sebuah benda dalam satuan waktu tertentu. Alat ini umum digunakan dalam berbagai bidang seperti otomotif, penerbangan, dan industri"
+        android:fontFamily="@font/ubunturegular"
+
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tachometer_title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/frekuensi_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="visible"
+        android:text="Frekuensi"
+        android:fontFamily="@font/ubuntubold"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:drawableStartCompat="@drawable/ic_freq"
+        app:layout_constraintTop_toBottomOf="@id/tachometer_body_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/frekuensi_body_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="visible"
+        android:text="Frekuensi adalah besaran yang menyatakan jumlah siklus perulangan suatu peristiwa dalam satu satuan waktu. Frekuensi diukur dalam satuan Hertz (Hz) yang menyatakan jumlah siklus dalam satu detik"
+        android:fontFamily="@font/ubunturegular"
+
+        android:textSize="18sp"
+        android:textColor="@color/primary_blue"
+        app:layout_constraintTop_toBottomOf="@id/frekuensi_title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
