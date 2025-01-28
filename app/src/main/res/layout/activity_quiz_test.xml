@@ -58,62 +58,130 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_option1"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="74dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:drawableStart="@drawable/ic_option"
+        android:drawableTint="@color/white"
+        android:text="Option 1"
+        android:fontFamily="@font/ubuntubold"
+        android:textColor="@color/primary_blue"
+        android:background="@drawable/button_quiz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question_title_text"/>
 
-    <RadioGroup
-        android:id="@+id/rg_question"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_option2"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="74dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:drawableStart="@drawable/ic_option"
+        android:drawableTint="@color/white"
+        android:text="Option 2"
+        android:fontFamily="@font/ubuntubold"
+        android:textColor="@color/primary_blue"
+        android:background="@drawable/button_quiz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_option1"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_option3"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="74dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:drawableStart="@drawable/ic_option"
+        android:drawableTint="@color/white"
+        android:text="Option 3"
+        android:fontFamily="@font/ubuntubold"
+        android:textColor="@color/primary_blue"
+        android:background="@drawable/button_quiz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_option2"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_option4"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="74dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:drawableStart="@drawable/ic_option"
+        android:drawableTint="@color/white"
+        android:text="Option 4"
+        android:fontFamily="@font/ubuntubold"
+        android:textColor="@color/primary_blue"
+        android:background="@drawable/button_quiz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_option3"/>
+
+    <TextView
+        android:id="@+id/answer_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="74dp"
+        android:visibility="visible"
+        android:text="Benar/Salah"
+        android:fontFamily="@font/ubuntubold"
+        android:textSize="20sp"
+        android:textColor="@color/primary_blue"
+        app:layout_constraintTop_toBottomOf="@id/btn_option4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/answer_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintTop_toBottomOf="@id/question_title_text"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="74dp"
+        android:visibility="visible"
+        android:text="Jawaban Benar:"
+        android:fontFamily="@font/ubuntubold"
+        android:textSize="18sp"
+        android:textColor="@color/primary_blue"
+        app:layout_constraintTop_toBottomOf="@id/answer_title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-        <RadioButton
-            android:id="@+id/rb_option1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Option 1"
-            android:fontFamily="@font/ubunturegular"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/rg_question"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="74dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:text="Next"
+        android:fontFamily="@font/ubuntubold"
+        android:textColor="@color/primary_yellow"
+        android:background="@drawable/button_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/answer_text"/>
 
-        <RadioButton
-            android:id="@+id/rb_option2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Option 2"
-            android:fontFamily="@font/ubunturegular"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rb_option1"/>
-
-        <RadioButton
-            android:id="@+id/rb_option3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Option 3"
-            android:fontFamily="@font/ubunturegular"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rb_option2"/>
-
-        <RadioButton
-            android:id="@+id/rb_option4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Option 4"
-            android:fontFamily="@font/ubunturegular"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rb_option3"/>
-
-    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

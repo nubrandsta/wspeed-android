@@ -1,149 +1,133 @@
 <resources>
     <string name="app_name">wspeed</string>
+
+    <!-- RPM -->
     <string name="rpm_title">Materi RPM</string>
     <string name="rpm_body">
-        RPM (Rotation Per Minute) adalah satuan pengukuran untuk menghitung jumlah putaran atau rotasi suatu benda dalam satu menit. Istilah ini umum digunakan dalam berbagai bidang, seperti:
-
-        Bidang Teknologi dan Mesin
-        1. Kecepatan putaran mesin (engine).
-        2. Kecepatan putaran turbin.
-        3. Kecepatan putaran pompa.
-        4. Kecepatan putaran motor listrik.
-
-        Bidang Otomotif
-        1. Kecepatan putaran mesin kendaraan.
-        2. Kecepatan putaran roda.
-        3. Pengaturan transmisi otomatis.
-
-        Bidang Industri
-        1. Pengukuran kecepatan produksi.
-        2. Pengukuran efisiensi mesin.
-        3. Pengukuran konsumsi energi.
-
-        Satuan Pengukuran
-        1. RPM (Rotation Per Minute).
-        2. RPS (Rotation Per Second).
-        3. Hz (Hertz).
-
-        Contoh Penggunaan
-        1. Mesin mobil: 2.000-6.000 RPM.
-        2. Mesin pesawat: 10.000-20.000 RPM.
-        3. Pompa air: 1.000-3.000 RPM.
-
-        Faktor yang Mempengaruhi RPM
-        1. Tipe mesin.
-        2. Beban kerja.
-        3. Suhu operasional.
-        4. Kondisi perawatan.
-
-        Alat Pengukur RPM
-        1. Tachometer.
-        2. Speedometer.
-        3. Sensor RPM.
-        4. Multimeter.
+        RPM (Rotation Per Minute) adalah satuan pengukuran untuk menghitung jumlah putaran atau rotasi suatu benda dalam satu menit. Istilah ini umum digunakan dalam berbagai bidang, seperti:\n\n
+        Bidang Teknologi dan Mesin\n
+        1. Kecepatan putaran mesin (engine).\n
+        2. Kecepatan putaran turbin.\n
+        3. Kecepatan putaran pompa.\n
+        4. Kecepatan putaran motor listrik.\n\n
+        Bidang Otomotif\n
+        1. Kecepatan putaran mesin kendaraan.\n
+        2. Kecepatan putaran roda.\n
+        3. Pengaturan transmisi otomatis.\n\n
+        Bidang Industri\n
+        1. Pengukuran kecepatan produksi.\n
+        2. Pengukuran efisiensi mesin.\n
+        3. Pengukuran konsumsi energi.\n\n
+        Satuan Pengukuran\n
+        1. RPM (Rotation Per Minute).\n
+        2. RPS (Rotation Per Second).\n
+        3. Hz (Hertz).\n\n
+        Contoh Penggunaan\n
+        1. Mesin mobil: 2.000-6.000 RPM.\n
+        2. Mesin pesawat: 10.000-20.000 RPM.\n
+        3. Pompa air: 1.000-3.000 RPM.\n\n
+        Faktor yang Mempengaruhi RPM\n
+        1. Tipe mesin.\n
+        2. Beban kerja.\n
+        3. Suhu operasional.\n
+        4. Kondisi perawatan.\n\n
+        Alat Pengukur RPM\n
+        1. Tachometer.\n
+        2. Speedometer.\n
+        3. Sensor RPM.\n
+        4. Multimeter.\n
     </string>
+
     <!-- Kecepatan Sudut -->
     <string name="wspeed_title">Materi Kecepatan Sudut</string>
     <string name="wspeed_body">
-        Kecepatan sudut (dalam bahasa Inggris: Angular Velocity) adalah besaran yang menyatakan perubahan sudut dalam satuan waktu. Satuan yang umum digunakan untuk mengukur kecepatan sudut adalah:
-
-        Satuan Kecepatan Sudut
-        1. Radian per detik (rad/s)
-        2. Radian per menit (rad/min)
-        3. Derajat per detik (°/s)
-        4. Derajat per menit (°/min)
-        5. Rotasi per menit (RPM)
-
-        Rumus Kecepatan Sudut
-        Kecepatan sudut (ω) dapat dihitung menggunakan rumus:
-        ω = Δθ / Δt
-        Keterangan:
-        - ω = kecepatan sudut
-        - Δθ = perubahan sudut
-        - Δt = perubahan waktu
-
-        Contoh Aplikasi
-        1. Putaran roda kendaraan
-        2. Rotasi mesin
-        3. Putaran turbin
-        4. Gerakan robot
-        5. Sistem navigasi
-
-        Hubungan dengan Besaran Lain
-        1. Kecepatan linear (v) = kecepatan sudut (ω) × jari-jari (r)
-        2. Percepatan sudut (α) = perubahan kecepatan sudut terhadap waktu
-        3. Energi kinetik rotasi = 0.5 × momen inersia × kecepatan sudut²
+        Kecepatan sudut (dalam bahasa Inggris: Angular Velocity) adalah besaran yang menyatakan perubahan sudut dalam satuan waktu. Satuan yang umum digunakan untuk mengukur kecepatan sudut adalah:\n\n
+        Satuan Kecepatan Sudut\n
+        1. Radian per detik (rad/s)\n
+        2. Radian per menit (rad/min)\n
+        3. Derajat per detik (°/s)\n
+        4. Derajat per menit (°/min)\n
+        5. Rotasi per menit (RPM)\n\n
+        Rumus Kecepatan Sudut\n
+        Kecepatan sudut (ω) dapat dihitung menggunakan rumus:\n
+        ω = Δθ / Δt\n
+        Keterangan:\n
+        - ω = kecepatan sudut\n
+        - Δθ = perubahan sudut\n
+        - Δt = perubahan waktu\n\n
+        Contoh Aplikasi\n
+        1. Putaran roda kendaraan\n
+        2. Rotasi mesin\n
+        3. Putaran turbin\n
+        4. Gerakan robot\n
+        5. Sistem navigasi\n\n
+        Hubungan dengan Besaran Lain\n
+        1. Kecepatan linear (v) = kecepatan sudut (ω) × jari-jari (r)\n
+        2. Percepatan sudut (α) = perubahan kecepatan sudut terhadap waktu\n
+        3. Energi kinetik rotasi = 0.5 × momen inersia × kecepatan sudut²\n
     </string>
+
     <!-- Tachometer -->
     <string name="tachometer_title">Materi Tachometer</string>
     <string name="tachometer_body">
-        Tachometer adalah alat pengukur kecepatan putaran atau rotasi suatu benda dalam satuan waktu, biasanya digunakan untuk mengukur:
-
-        Jenis Tachometer
-        1. Tachometer analog (menggunakan jarum dan skala)
-        2. Tachometer digital (menampilkan angka secara digital)
-        3. Tachometer optik (menggunakan sensor optik)
-        4. Tachometer listrik (menggunakan sensor listrik)
-        5. Tachometer nirkabel (menggunakan teknologi nirkabel)
-
-        Fungsi Tachometer
-        1. Mengukur kecepatan putaran mesin
-        2. Mengukur kecepatan rotasi turbin
-        3. Mengukur kecepatan putaran pompa
-        4. Mengukur kecepatan kendaraan
-        5. Mengukur efisiensi mesin
-
-        Satuan Pengukuran
-        1. RPM (Rotation Per Minute)
-        2. RPS (Rotation Per Second)
-        3. Rad/s (Radian per detik)
-        4. °/s (Derajat per detik)
-
-        Aplikasi Tachometer
-        1. Industri otomotif
-        2. Industri pesawat
-        3. Industri perkapalan
-        4. Pembangkit listrik
-        5. Pabrikasi dan manufaktur
-
-        Cara Kerja
-        1. Sensor mendeteksi putaran atau rotasi.
-        2. Sinyal dikirim ke unit pengolah.
-        3. Unit pengolah menghitung kecepatan putaran.
-        4. Hasil ditampilkan pada layar.
+        Tachometer adalah alat pengukur kecepatan putaran atau rotasi suatu benda dalam satuan waktu, biasanya digunakan untuk mengukur:\n\n
+        Jenis Tachometer\n
+        1. Tachometer analog (menggunakan jarum dan skala)\n
+        2. Tachometer digital (menampilkan angka secara digital)\n
+        3. Tachometer optik (menggunakan sensor optik)\n
+        4. Tachometer listrik (menggunakan sensor listrik)\n
+        5. Tachometer nirkabel (menggunakan teknologi nirkabel)\n\n
+        Fungsi Tachometer\n
+        1. Mengukur kecepatan putaran mesin\n
+        2. Mengukur kecepatan rotasi turbin\n
+        3. Mengukur kecepatan putaran pompa\n
+        4. Mengukur kecepatan kendaraan\n
+        5. Mengukur efisiensi mesin\n\n
+        Satuan Pengukuran\n
+        1. RPM (Rotation Per Minute)\n
+        2. RPS (Rotation Per Second)\n
+        3. Rad/s (Radian per detik)\n
+        4. °/s (Derajat per detik)\n\n
+        Aplikasi Tachometer\n
+        1. Industri otomotif\n
+        2. Industri pesawat\n
+        3. Industri perkapalan\n
+        4. Pembangkit listrik\n
+        5. Pabrikasi dan manufaktur\n\n
+        Cara Kerja\n
+        1. Sensor mendeteksi putaran atau rotasi.\n
+        2. Sinyal dikirim ke unit pengolah.\n
+        3. Unit pengolah menghitung kecepatan putaran.\n
+        4. Hasil ditampilkan pada layar.\n
     </string>
+
     <!-- Frekuensi -->
     <string name="frequency_title">Materi Frekuensi</string>
     <string name="frequency_body">
-        Frekuensi adalah jumlah perulangan atau siklus suatu peristiwa dalam satuan waktu, biasanya dinyatakan dalam satuan Hertz (Hz). Frekuensi menggambarkan seberapa sering suatu peristiwa terjadi dalam waktu tertentu.
-
-        Jenis Frekuensi
-        1. Frekuensi listrik (arus bolak-balik): 50-60 Hz.
-        2. Frekuensi suara: 20 Hz - 20.000 Hz.
-        3. Frekuensi cahaya: 4.24 x 10^14 Hz - 7.69 x 10^14 Hz.
-        4. Frekuensi radio: 535 kHz - 1705 kHz.
-        5. Frekuensi gelombang mikro: 3 kHz - 300 GHz.
-
-        Satuan Frekuensi
-        1. Hertz (Hz)
-        2. Kilohertz (kHz)
-        3. Megahertz (MHz)
-        4. Gigahertz (GHz)
-        5. Terahertz (THz)
-
-        Contoh Frekuensi
-        1. Frekuensi listrik rumah tangga: 50 Hz.
-        2. Frekuensi Wi-Fi: 2,4 GHz.
-        3. Frekuensi sinyal TV: 50-860 MHz.
-        4. Frekuensi suara manusia: 85-255 Hz.
-
-        Rumus Frekuensi
-        Frekuensi (f) = 1 / Periode (T)
-
-        Faktor yang Mempengaruhi Frekuensi
-        1. Panjang gelombang.
-        2. Kecepatan gelombang.
-        3. Periode.
-        4. Energi.
+        Frekuensi adalah jumlah perulangan atau siklus suatu peristiwa dalam satuan waktu, biasanya dinyatakan dalam satuan Hertz (Hz). Frekuensi menggambarkan seberapa sering suatu peristiwa terjadi dalam waktu tertentu.\n\n
+        Jenis Frekuensi\n
+        1. Frekuensi listrik (arus bolak-balik): 50-60 Hz.\n
+        2. Frekuensi suara: 20 Hz - 20.000 Hz.\n
+        3. Frekuensi cahaya: 4.24 x 10^14 Hz - 7.69 x 10^14 Hz.\n
+        4. Frekuensi radio: 535 kHz - 1705 kHz.\n
+        5. Frekuensi gelombang mikro: 3 kHz - 300 GHz.\n\n
+        Satuan Frekuensi\n
+        1. Hertz (Hz)\n
+        2. Kilohertz (kHz)\n
+        3. Megahertz (MHz)\n
+        4. Gigahertz (GHz)\n
+        5. Terahertz (THz)\n\n
+        Contoh Frekuensi\n
+        1. Frekuensi listrik rumah tangga: 50 Hz.\n
+        2. Frekuensi Wi-Fi: 2,4 GHz.\n
+        3. Frekuensi sinyal TV: 50-860 MHz.\n
+        4. Frekuensi suara manusia: 85-255 Hz.\n\n
+        Rumus Frekuensi\n
+        Frekuensi (f) = 1 / Periode (T)\n\n
+        Faktor yang Mempengaruhi Frekuensi\n
+        1. Panjang gelombang.\n
+        2. Kecepatan gelombang.\n
+        3. Periode.\n
+        4. Energi.\n
     </string>
 </resources>

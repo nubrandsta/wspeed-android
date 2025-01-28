@@ -66,6 +66,12 @@ class HomeActivity : AppCompatActivity() {
 
         }
 
+        binding.btnMateri.setOnClickListener{
+            val intent = Intent(this, MateriActivity::class.java)
+            startActivity(intent)
+
+        }
+
     }
     private fun showDialogRPM() {
         // Inflate the dialog layout
